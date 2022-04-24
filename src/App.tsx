@@ -1,5 +1,4 @@
 import React from "react";
-import "./App.css";
 import AutoComplete from "./components/autoComplete";
 import COUNTRIES from "./data/Countries";
 
