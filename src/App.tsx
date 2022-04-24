@@ -1,14 +1,14 @@
 import React from "react";
 import "./App.css";
 import AutoComplete from "./components/autoComplete";
-import SONGS from "./data/PorcupineTreeSongs";
+import COUNTRIES from "./data/Countries";
 
 export default function App() {
   return (
     <div className="App">
       <div>
         <AutoComplete
-          suggestions={SONGS}
+          suggestions={COUNTRIES.map((country: any) => country.name)}
           ignorecase
           placeHolder="Search for a song here"
         />
