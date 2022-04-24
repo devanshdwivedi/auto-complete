@@ -50,6 +50,18 @@ export default function AutoComplete(props: AutoCompleteProps) {
           let newActiveIndex = (activeIndex + 1) % matching.length;
           setActiveIndex(newActiveIndex);
         }
+      } else if (e.key == "ArrowUp") {
+        // Down arrow key
+        if (activeIndex === null) {
+          setActiveIndex(0);
+        } else {
+          if (activeIndex === 0) {
+            setActiveIndex(matching.length - 1);
+            return;
+          }
+          let newActiveIndex = (activeIndex - 1) % matching.length;
+          setActiveIndex(newActiveIndex);
+        }
       } else if (e.key === "Enter") {
         // Enter key
         if (activeIndex !== null) {

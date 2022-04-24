@@ -8,7 +8,15 @@ export default function Suggestions({ suggestions }: SuggestionsProps) {
   return (
     <>
       {suggestions.map((suggestion) => {
-        <div>{suggestion}</div>;
+        <div
+          style={{
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {suggestion}
+        </div>;
       })}
     </>
   );
